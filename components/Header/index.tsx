@@ -1,7 +1,8 @@
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import React, { useRef } from 'react';
+import Image from 'next/image';
 
-const MAX_HEIGHT = 200;
+const MAX_HEIGHT = 150;
 const MIN_HEIGHT = 100;
 
 export default function Header() {
@@ -15,9 +16,21 @@ export default function Header() {
   }, [])
 
   return (
-    <div ref={headerRef} style={{height: MAX_HEIGHT }} className="w-full fixed bg-green-400 flex gap-x-10 items-center">
-      <img src="https://prod-static.chronocarpe.com/nd/img/fr/logo_chrono_1202.jpg" />
-      <img width={30} height={30} src="https://prod-static.chronocarpe.com/nd/img/common/home-icon.png" alt="Home" />
+    <div ref={headerRef} style={{ height: MAX_HEIGHT }} className="w-full fixed bg-green-400">
+      <div className="container mx-auto flex gap-x-10 items-center">
+        <Image
+          alt="logo"
+          src="/logo/chrono.jpeg"
+          width={343}
+          height={86}
+        />
+        <Image
+          width={30}
+          height={30}
+          src="/icons/home.png"
+          alt="Home"
+        />
+      </div>
     </div>
   );
 }
