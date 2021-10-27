@@ -1,9 +1,8 @@
 if (typeof window === 'undefined') {
   const { server } = require('./server')
-  server.listen()
+  server.listen({ onUnhandledRequest: 'bypass'})
 } else {
   const { worker } = require('./browser')
-  console.log('worker', worker);
   worker.start()
 }
 

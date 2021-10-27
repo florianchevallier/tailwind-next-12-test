@@ -6,6 +6,6 @@ module.exports = {
   reactStrictMode: true,
   i18n,
   images: {
-    domains: ["prod-static.chronocarpe.com"]
+    domains: ["prod-static.chronocarpe.com", "raw.githubusercontent.com"]
   }
 }

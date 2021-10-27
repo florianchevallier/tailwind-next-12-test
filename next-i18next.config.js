@@ -3,7 +3,7 @@ const I18NextHttpBackend = require('i18next-http-backend')
 module.exports = {
   i18n: {
     defaultLocale: 'fr',
-    locales: ['fr', 'nl', 'es', 'en'],
+    locales: ['fr', 'nl', 'es', 'en', 'de'],
   },
   debug: false,
   ns: ["common"],
